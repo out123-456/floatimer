@@ -19,39 +19,39 @@ import androidx.compose.ui.Alignment
 import com.qiqi.floatimer.ui.theme.ComposeEmptyActivityTheme
 
 class MainActivity : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            ComposeEmptyActivityTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
-        }
-    }
+	override fun onCreate(savedInstanceState: Bundle?) {
+		super.onCreate(savedInstanceState)
+		enableEdgeToEdge()
+		setContent {
+			ComposeEmptyActivityTheme {
+				Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+					Greeting(
+						name = "Android",
+						modifier = Modifier.padding(innerPadding)
+					)
+				}
+			}
+		}
+	}
 }
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Row(
-        modifier = modifier.fillMaxSize(),
-        horizontalArrangement = Arrangement.Center,
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        Text(
-            text = "Hello $name!"
-        )
-    }
+	Row(
+		modifier = modifier.fillMaxSize(),
+		horizontalArrangement = Arrangement.Center,
+		verticalAlignment = Alignment.CenterVertically
+	) {
+		Text(
+			text = "Hello $name!"
+		)
+	}
 }
 
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    ComposeEmptyActivityTheme {
-        Greeting("Android")
-    }
+	ComposeEmptyActivityTheme {
+		Greeting("Android")
+	}
 }

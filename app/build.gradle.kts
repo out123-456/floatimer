@@ -45,4 +45,7 @@ dependencies {
     implementation(libs.androidx.material3)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    
+    implementation("androidx.lifecycle:lifecycle-service:2.11.0-alpha03")
+    implementation("androidx.savedstate:savedstate-ktx:1.2.1")
 }
